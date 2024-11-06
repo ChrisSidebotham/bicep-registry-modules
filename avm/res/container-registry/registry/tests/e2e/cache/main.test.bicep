@@ -79,6 +79,11 @@ module testDeployment '../../../main.bicep' = [
           targetRepository: 'cached-docker-hub/hello-world'
           credentialSetResourceId: nestedDependencies.outputs.acrCredentialSetResourceId
         }
+        {
+          name: 'publicRule'
+          sourceRepository: 'mcr.microsoft.com/bicep/avm/*'
+          targetRepository: 'avm/*'
+        }
       ]
     }
   }

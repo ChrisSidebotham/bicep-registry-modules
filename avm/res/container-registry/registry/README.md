@@ -67,6 +67,11 @@ module registry 'br/public:avm/res/container-registry/registry:<version>' = {
         sourceRepository: 'docker.io/library/hello-world'
         targetRepository: 'cached-docker-hub/hello-world'
       }
+      {
+        name: 'publicRule'
+        sourceRepository: 'mcr.microsoft.com/bicep/avm/*'
+        targetRepository: 'avm/*'
+      }
     ]
     credentialSets: [
       {
@@ -119,6 +124,11 @@ module registry 'br/public:avm/res/container-registry/registry:<version>' = {
           "name": "customRule",
           "sourceRepository": "docker.io/library/hello-world",
           "targetRepository": "cached-docker-hub/hello-world"
+        },
+        {
+          "name": "publicRule",
+          "sourceRepository": "mcr.microsoft.com/bicep/avm/*",
+          "targetRepository": "avm/*"
         }
       ]
     },
@@ -168,6 +178,11 @@ param cacheRules = [
     name: 'customRule'
     sourceRepository: 'docker.io/library/hello-world'
     targetRepository: 'cached-docker-hub/hello-world'
+  }
+  {
+    name: 'publicRule'
+    sourceRepository: 'mcr.microsoft.com/bicep/avm/*'
+    targetRepository: 'avm/*'
   }
 ]
 param credentialSets = [
