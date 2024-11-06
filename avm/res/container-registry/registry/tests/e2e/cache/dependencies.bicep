@@ -45,7 +45,7 @@ resource keyVaulSecretPwd 'Microsoft.KeyVault/vaults/secrets@2023-07-01' = {
   }
 }
 
-resource acr 'Microsoft.ContainerRegistry/registries@2023-11-01-preview' = {
+resource acr 'Microsoft.ContainerRegistry/registries@2023-07-01' = {
   name: acrName
   location: location
   sku: {
@@ -53,7 +53,7 @@ resource acr 'Microsoft.ContainerRegistry/registries@2023-11-01-preview' = {
   }
 }
 
-resource acrCredentialSet 'Microsoft.ContainerRegistry/registries/credentialSets@2023-11-01-preview' = {
+resource acrCredentialSet 'Microsoft.ContainerRegistry/registries/credentialSets@2023-07-01' = {
   parent: acr
   name: 'default'
   identity: {
