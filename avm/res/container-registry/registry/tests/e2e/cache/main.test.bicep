@@ -58,7 +58,7 @@ module testDeployment '../../../main.bicep' = [
       acrSku: 'Standard'
       credentialSets: [
         {
-          name: 'default'
+          name: 'credentialSet1'
           managedIdentities: {
             systemAssigned: true
           }

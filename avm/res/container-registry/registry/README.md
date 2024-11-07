@@ -86,7 +86,7 @@ module registry 'br/public:avm/res/container-registry/registry:<version>' = {
         managedIdentities: {
           systemAssigned: true
         }
-        name: 'default'
+        name: 'credentialSet1'
       }
     ]
     location: '<location>'
@@ -146,7 +146,7 @@ module registry 'br/public:avm/res/container-registry/registry:<version>' = {
           "managedIdentities": {
             "systemAssigned": true
           },
-          "name": "default"
+          "name": "credentialSet1"
         }
       ]
     },
@@ -198,7 +198,7 @@ param credentialSets = [
     managedIdentities: {
       systemAssigned: true
     }
-    name: 'default'
+    name: 'credentialSet1'
   }
 ]
 param location = '<location>'
