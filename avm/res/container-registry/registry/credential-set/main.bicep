@@ -27,7 +27,7 @@ resource registry 'Microsoft.ContainerRegistry/registries@2023-06-01-preview' ex
   name: registryName
 }
 
-resource credentialSet 'Microsoft.ContainerRegistry/registries/credentialSets@2023-11-01-preview' = {
+resource credentialSet 'Microsoft.ContainerRegistry/registries/credentialSets@2023-07-01' = {
   name: name
   parent: registry
   identity: identity
